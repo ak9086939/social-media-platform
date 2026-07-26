@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile - SocialApp</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <h1>
+            SocialApp
+        </h1>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a id="profile-link">
+                My Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="form-container">
+
+        <h2>
+            Edit Profile
+        </h2>
+
+
+        <form id="edit-profile-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <textarea
+                id="bio"
+                placeholder="Write something about yourself..."
+                rows="5">
+            </textarea>
+
+
+            <input
+                type="text"
+                id="profileImage"
+                placeholder="Profile Image URL"
+            >
+
+
+            <button
+                type="submit">
+
+                Update Profile
+
+            </button>
+
+        </form>
+
+
+        <p id="message"></p>
+
+    </main>
+
+
+    <script
+        src="js/edit-profile.js">
+    </script>
+
+</body>
+
+</html>

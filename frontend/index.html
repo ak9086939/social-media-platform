@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Home - SocialApp</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <h1>SocialApp</h1>
+
+        <nav id="nav-links">
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Search Section -->
+
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search users or posts..."
+            >
+
+            <button id="search-btn">
+
+                Search 🔍
+
+            </button>
+
+        </section>
+
+        <!-- Search Results -->
+
+        <div
+            id="search-results">
+
+        </div>
+
+        <!-- User Welcome -->
+        <section id="user-section">
+
+        </section>
+
+
+        <!-- Create Post -->
+        <section
+            class="create-post"
+            id="create-post-section">
+
+            <h2>Create a Post</h2>
+
+
+            <form id="post-form">
+
+                <textarea
+                    id="post-content"
+                    placeholder="What's on your mind?"
+                    required>
+                </textarea>
+
+
+                <input
+                    type="text"
+                    id="post-image"
+                    placeholder="Image URL (optional)"
+                >
+
+
+                <button type="submit">
+                    Create Post
+                </button>
+
+            </form>
+
+
+            <p id="post-message"></p>
+
+        </section>
+
+
+        <!-- All Posts -->
+        <section id="posts-container">
+
+        </section>
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
