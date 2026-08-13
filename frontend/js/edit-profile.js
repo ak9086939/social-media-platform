@@ -2,7 +2,6 @@ const API_URL = "http://localhost:5000/api";
 
 // GET CURRENT USER
 const userData = localStorage.getItem("user");
-
 const currentUser = userData ? JSON.parse(userData) : null;
 
 // CHECK LOGIN
@@ -71,6 +70,7 @@ document.getElementById("edit-profile-form")
                     message.style.color = "green";
                     
                     // Update Local Storage
+                    
                     localStorage.setItem("user",JSON.stringify(data.user));
                     setTimeout(
                         () => {
@@ -88,8 +88,6 @@ document.getElementById("edit-profile-form")
             }
         }
     );
-// ===============================
-// PAGE LOAD
-// ===============================
 
+// PAGE LOAD
 getUserDetails();
