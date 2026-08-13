@@ -1,6 +1,4 @@
-/* ===============================
-   RESET
-================================ */
+/* RESET */
 
 * {
     margin: 0;
@@ -9,9 +7,7 @@
 }
 
 
-/* ===============================
-   BODY
-================================ */
+/* BODY */
 
 body {
     font-family: Arial, sans-serif;
@@ -20,9 +16,7 @@ body {
 }
 
 
-/* ===============================
-   NAVBAR
-================================ */
+/* NAVBAR */
 
 .navbar {
     background: linear-gradient(
@@ -99,9 +93,7 @@ body {
 }
 
 
-/* ===============================
-   MAIN CONTAINER
-================================ */
+/* MAIN CONTAINER */
 
 .container,
 .profile-container {
@@ -111,9 +103,7 @@ body {
 }
 
 
-/* ===============================
-   USER SECTION
-================================ */
+/* USER SECTION */
 
 #user-section {
     background: white;
@@ -133,9 +123,7 @@ body {
 }
 
 
-/* ===============================
-   SEARCH
-================================ */
+/* SEARCH */
 
 .search-section {
     background: white;
@@ -190,9 +178,7 @@ body {
 }
 
 
-/* ===============================
-   CREATE POST
-================================ */
+/* CREATE POST */
 
 .create-post {
     background: white;
@@ -283,9 +269,7 @@ body {
 }
 
 
-/* ===============================
-   POST CARD
-================================ */
+/* POST CARD */
 
 .post-card {
     background: white;
@@ -336,9 +320,7 @@ body {
 }
 
 
-/* ===============================
-   POST IMAGE
-================================ */
+/* POST IMAGE */
 
 .post-card img,
 .post-image {
@@ -356,9 +338,7 @@ body {
 }
 
 
-/* ===============================
-   POST ACTIONS
-================================ */
+/* POST ACTIONS */
 
 .post-actions {
     display: flex;
@@ -430,9 +410,7 @@ body {
 }
 
 
-/* ===============================
-   COMMENTS
-================================ */
+/* COMMENTS */
 
 .comment-section {
     margin-top: 20px;
@@ -494,9 +472,7 @@ body {
 }
 
 
-/* ===============================
-   PROFILE
-================================ */
+/* PROFILE */
 
 .profile-card {
     background: white;
@@ -572,10 +548,7 @@ body {
     background: #125dcc;
 }
 
-
-/* ===============================
-   SEARCH RESULTS
-================================ */
+/* SEARCH RESULTS */
 
 .search-result {
     background: white;
@@ -600,10 +573,7 @@ body {
     font-weight: bold;
 }
 
-
-/* ===============================
-   FORM
-================================ */
+/* FORM */
 
 .form-container {
     width: 90%;
@@ -667,10 +637,7 @@ body {
     cursor: pointer;
 }
 
-
-/* ===============================
-   MOBILE RESPONSIVE
-================================ */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 600px) {
 
@@ -732,9 +699,7 @@ body {
 
 }
 
-/* =================================
-   PROFILE HEADER
-================================= */
+/* PROFILE HEADER */
 
 .profile-header {
     display: flex;
@@ -743,10 +708,7 @@ body {
     text-align: center;
 }
 
-
-/* =================================
-   PROFILE DETAILS
-================================= */
+/* PROFILE DETAILS */
 
 .profile-details h1 {
     margin-bottom: 5px;
@@ -763,10 +725,7 @@ body {
     margin-bottom: 15px;
 }
 
-
-/* =================================
-   PROFILE STATS
-================================= */
+/* PROFILE STATS */
 
 .profile-stats {
     display: flex;
@@ -808,10 +767,7 @@ body {
     font-size: 14px;
 }
 
-
-/* =================================
-   USER LIST SECTION
-================================= */
+/* USER LIST SECTION */
 
 .user-list-section {
     margin-bottom: 25px;
@@ -867,10 +823,7 @@ body {
     color: white;
 }
 
-
-/* =================================
-   USER LIST ITEM
-================================= */
+/* USER LIST ITEM */
 
 .user-list-item {
     display: flex;
@@ -927,10 +880,7 @@ body {
     font-size: 14px;
 }
 
-
-/* =================================
-   FOLLOW BUTTON
-================================= */
+/* FOLLOW BUTTON */
 
 .follow-btn,
 .edit-profile-btn {
@@ -955,10 +905,7 @@ body {
     background: #125dcc;
 }
 
-
-/* =================================
-   MOBILE
-================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -978,9 +925,7 @@ body {
 
 }
 
-/* ===============================
-   FOLLOWERS / FOLLOWING BOX
-================================ */
+/* FOLLOWERS / FOLLOWING BOX */
 
 .stat-box {
     cursor: pointer;
@@ -993,10 +938,7 @@ body {
     color: #2563eb;
 }
 
-
-/* ===============================
-   OVERLAY
-================================ */
+/* OVERLAY */
 
 .user-list-overlay {
 
@@ -1025,10 +967,7 @@ body {
 
 }
 
-
-/* ===============================
-   LIST BOX
-================================ */
+/* LIST BOX */
 
 .user-list-box {
 
@@ -1059,10 +998,7 @@ body {
 
 }
 
-
-/* ===============================
-   USER ITEM
-================================ */
+/* USER ITEM */
 
 .user-list-item {
 
@@ -1111,10 +1047,7 @@ body {
 
 }
 
-
-/* ===============================
-   CLOSE BUTTON
-================================ */
+/* CLOSE BUTTON */
 
 .close-list-btn {
 
