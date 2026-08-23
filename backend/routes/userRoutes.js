@@ -1,112 +1,38 @@
 const express = require("express");
-
-const protect =
-    require("../middleware/authMiddleware");
-
+const protect = require("../middleware/authMiddleware");
 const router = express.Router();
 
-
 const {
-
     registerUser,
-
     loginUser,
-
     getAllUsers,
-
     followUnfollowUser,
-
     getUserProfile,
-
     updateUserProfile
+} = require("../controllers/userController");
 
-} = require(
-
-    "../controllers/userController"
-
-);
-
-
-// ==================================================
 // REGISTER
-// ==================================================
 
-router.post(
+router.post("/register",registerUser);
 
-    "/register",
-
-    registerUser
-
-);
-
-
-// ==================================================
 // LOGIN
-// ==================================================
 
-router.post(
+router.post("/login",loginUser);
 
-    "/login",
-
-    loginUser
-
-);
-
-
-// ==================================================
 // GET ALL USERS
-// ==================================================
 
-router.get(
+router.get("/",getAllUsers);
 
-    "/",
-
-    getAllUsers
-
-);
-
-
-// ==================================================
 // FOLLOW / UNFOLLOW
-// ==================================================
 
-// Is route ko profile route se pehle rakha gaya hai
+router.put("/:id/follow",protect,followUnfollowUser);
 
-router.put(
-
-    "/:id/follow",
-
-    protect,
-
-    followUnfollowUser
-
-);
-
-
-// ==================================================
 // UPDATE PROFILE
-// ==================================================
 
-router.put(
+router.put("/:id",updateUserProfile);
 
-    "/:id",
-
-    updateUserProfile
-
-);
-
-
-// ==================================================
 // GET PROFILE
-// ==================================================
 
-router.get(
-
-    "/:id",
-
-    getUserProfile
-
-);
-
+router.get("/:id",getUserProfile);
 
 module.exports = router;
