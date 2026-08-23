@@ -7,13 +7,11 @@ const createComment = async (req, res) => {
         const {text,user,post} = req.body;
         if (!text || !user || !post) {
             return res.status(400).json({
-                message:
-                    "Text, user and post are required"
+                message: "Text, user and post are required"
             });
         }
 
         const comment = await Comment.create({text,user,post});
-        
         const populatedComment = await Comment.findById(comment._id).populate("user","name username profileImage");
         
         res.status(201).json(populatedComment);
@@ -33,7 +31,6 @@ const getCommentsByPost = async (req,res) => {
         const comments = await Comment.find({post:req.params.postId})
             .populate("user","name username profileImage")
             .sort({createdAt:-1});
-
         res.json(comments);
 
     } catch (error) {
@@ -59,7 +56,6 @@ const deleteComment = async (req,res) => {
         // CHECK COMMENT OWNER
 
         const userId = req.body.userId;
-
         if (userId && String(comment.user) !== String(userId)) {
             return res.status(403).json({
                 message: "You can delete only your own comment"
@@ -67,7 +63,6 @@ const deleteComment = async (req,res) => {
         }
 
         await Comment.findByIdAndDelete(req.params.id);
-
         res.json({
             message: "Comment deleted successfully"
         });
