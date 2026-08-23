@@ -1,134 +1,43 @@
-const express =
-    require("express");
-
-const router =
-    express.Router();
-
+const express = require("express");
+const router = express.Router();
 const {
-
     createPost,
-
     getAllPosts,
-
     likePost,
-
     addComment,
-
     deleteComment,
-
     updatePost,
-
     deletePost
+} = require("../controllers/postController");
 
-} =
-    require("../controllers/postController");
+const authMiddleware = require("../middleware/authMiddleware");
 
-const authMiddleware =
-    require("../middleware/authMiddleware");
-
-
-// ==========================================
 // GET ALL POSTS
-// ==========================================
 
-router.get(
+router.get("/",getAllPosts);
 
-    "/",
-
-    getAllPosts
-
-);
-
-
-// ==========================================
 // CREATE POST
-// ==========================================
 
-router.post(
+router.post("/",authMiddleware,createPost);
 
-    "/",
-
-    authMiddleware,
-
-    createPost
-
-);
-
-
-// ==========================================
 // LIKE / UNLIKE POST
-// ==========================================
 
-router.put(
+router.put("/:id/like",authMiddleware,likePost);
 
-    "/:id/like",
-
-    authMiddleware,
-
-    likePost
-
-);
-
-
-// ==========================================
 // ADD COMMENT
-// ==========================================
 
-router.post(
+router.post("/:id/comments",authMiddleware,addComment);
 
-    "/:id/comments",
-
-    authMiddleware,
-
-    addComment
-
-);
-
-
-// ==========================================
 // DELETE COMMENT
-// ==========================================
 
-router.delete(
+router.delete("/:postId/comments/:commentId",authMiddleware,deleteComment);
 
-    "/:postId/comments/:commentId",
-
-    authMiddleware,
-
-    deleteComment
-
-);
-
-
-// ==========================================
 // UPDATE POST
-// ==========================================
 
-router.put(
+router.put("/:id",authMiddleware,updatePost);
 
-    "/:id",
-
-    authMiddleware,
-
-    updatePost
-
-);
-
-
-// ==========================================
 // DELETE POST
-// ==========================================
 
-router.delete(
+router.delete("/:id",authMiddleware,deletePost);
 
-    "/:id",
-
-    authMiddleware,
-
-    deletePost
-
-);
-
-
-module.exports =
-    router;
+module.exports = router;
