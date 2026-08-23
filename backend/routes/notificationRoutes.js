@@ -1,90 +1,32 @@
 const express = require("express");
-
 const router = express.Router();
 
-
 const {
-
     getUnreadCount,
-
     getNotifications,
-
     markAsRead,
-
     deleteNotification,
-
     markAllAsRead
+} = require("../controllers/notificationController");
 
-} = require(
-
-    "../controllers/notificationController"
-
-);
-
-
-// ==========================================
 // UNREAD COUNT
-// ==========================================
 
-router.get(
+router.get("/user/:userId/unread-count",getUnreadCount);
 
-    "/user/:userId/unread-count",
-
-    getUnreadCount
-
-);
-
-
-// ==========================================
 // MARK ALL AS READ
-// ==========================================
 
-router.put(
+router.put("/user/:userId/read-all",markAllAsRead);
 
-    "/user/:userId/read-all",
-
-    markAllAsRead
-
-);
-
-
-// ==========================================
 // GET USER NOTIFICATIONS
-// ==========================================
 
-router.get(
+router.get("/:userId",getNotifications);
 
-    "/:userId",
-
-    getNotifications
-
-);
-
-
-// ==========================================
 // MARK ONE AS READ
-// ==========================================
 
-router.put(
+router.put("/:id/read",markAsRead);
 
-    "/:id/read",
-
-    markAsRead
-
-);
-
-
-// ==========================================
 // DELETE NOTIFICATION
-// ==========================================
 
-router.delete(
-
-    "/:id",
-
-    deleteNotification
-
-);
-
+router.delete("/:id",deleteNotification);
 
 module.exports = router;
