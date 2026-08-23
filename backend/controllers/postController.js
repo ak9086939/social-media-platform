@@ -12,7 +12,6 @@ const createPost = async (req, res) => {
         } = req.body;
 
         const userId = req.userId;
-
         if (!content || !content.trim()) {
             return res.status(400).json({
                 message:"Post content is required"
@@ -21,12 +20,9 @@ const createPost = async (req, res) => {
 
         const post =
             await Post.create({
-                content:
-                    content.trim(),
-                image:
-                    image || "",
-                author:
-                    userId
+                content:content.trim(),
+                image:image || "",
+                author:userId
             });
 
         const populatedPost =
@@ -354,7 +350,5 @@ module.exports = {
     addComment,
     deleteComment,
     updatePost,
-
     deletePost
-
 };
